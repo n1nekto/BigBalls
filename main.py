@@ -58,6 +58,7 @@ class Ball:
         Returns:
             bool: True if ball is exists.
         """
-        if self.radius != Union[int, float]:
+        necessary_types = [int, float]
+        if type(self.radius) not in necessary_types:
             return False
         return self.radius > 0
